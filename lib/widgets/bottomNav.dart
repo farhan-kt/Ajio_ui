@@ -35,8 +35,8 @@ class _BottomNavState extends State<BottomNav> {
             _currentSelectedIndex = newIndex;
           });
         },
-        selectedItemColor: Colors.black, // For selected item color
-        unselectedItemColor: Colors.black, // For unselected item color
+        selectedItemColor: Colors.black, 
+        unselectedItemColor: Colors.black, 
         items: [
           BottomNavigationBarItem(
               icon: Icon(Icons.store), label: 'Switch Stores'),
