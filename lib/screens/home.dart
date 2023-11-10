@@ -72,7 +72,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   CircleAvatar(
                     radius: 15,
                     backgroundColor: Colors.black,
-                    backgroundImage: AssetImage("assets/ajio.png"),
+                    backgroundImage: NetworkImage(
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvN86vCVk2TjEbIu-RPf8fg8u8wSTf86uuEA&usqp=CAU"),
                   ),
                   SizedBox(width: 5),
                   Text(
@@ -84,10 +85,10 @@ class _HomeScreenState extends State<HomeScreen> {
               const Tab(
                 child: Row(children: [
                   CircleAvatar(
-                    radius: 15,
-                    backgroundColor: Colors.black,
-                    backgroundImage: AssetImage("assets/ajio.png"),
-                  ),
+                      radius: 15,
+                      backgroundColor: Colors.black,
+                      backgroundImage: NetworkImage(
+                          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1GPQzRwesRR1qkKezfukGoN2LoPN-jAEo-A&usqp=CAU")),
                   SizedBox(width: 5),
                   Text(
                     'Winterwear',
@@ -100,7 +101,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   CircleAvatar(
                     radius: 15,
                     backgroundColor: Colors.black,
-                    backgroundImage: AssetImage("assets/ajio.png"),
+                    backgroundImage: NetworkImage(
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBu5vG3bCtDg_jVLNvFWWicwEMXhHvNOZ4cw&usqp=CAU"),
                   ),
                   SizedBox(width: 5),
                   Text(
@@ -114,7 +116,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   CircleAvatar(
                     radius: 15,
                     backgroundColor: Colors.black,
-                    backgroundImage: AssetImage("assets/ajio.png"),
+                    backgroundImage: NetworkImage(
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOAiRZnm7YjdxQhCScyX1ubwxvjRLv6jJ79Q&usqp=CAU"),
                   ),
                   SizedBox(width: 5),
                   Text(
@@ -128,7 +131,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   CircleAvatar(
                     radius: 15,
                     backgroundColor: Colors.black,
-                    backgroundImage: AssetImage("assets/ajio.png"),
+                    backgroundImage: NetworkImage(
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRSmnZNL0tvlQREKIv7sbshoCTuvDxnIXp2Q&usqp=CAU"),
                   ),
                   SizedBox(width: 5),
                   Text(
@@ -142,7 +146,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   CircleAvatar(
                     radius: 15,
                     backgroundColor: Colors.black,
-                    backgroundImage: AssetImage("assets/ajio.png"),
+                    backgroundImage: NetworkImage(
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfuKNJNfukdS3qR0eLCtw8NTwm38IsSxn7yw&usqp=CAU"),
                   ),
                   SizedBox(width: 5),
                   Text(
@@ -156,7 +161,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   CircleAvatar(
                     radius: 15,
                     backgroundColor: Colors.black,
-                    backgroundImage: AssetImage("assets/ajio.png"),
+                    backgroundImage: NetworkImage(
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvsDlfpvFceIiODnAzsgnM5Xteqe1JaFajBQ&usqp=CAU"),
                   ),
                   SizedBox(width: 5),
                   Text(
@@ -170,7 +176,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   CircleAvatar(
                     radius: 15,
                     backgroundColor: Colors.black,
-                    backgroundImage: AssetImage("assets/ajio.png"),
+                    backgroundImage: NetworkImage(
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaFbczhETJcu8OXd0U6DgGtXWhO5KNa1sVYg&usqp=CAU"),
                   ),
                   SizedBox(width: 5),
                   Text(
@@ -184,7 +191,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   CircleAvatar(
                     radius: 15,
                     backgroundColor: Colors.black,
-                    backgroundImage: AssetImage("assets/ajio.png"),
+                    backgroundImage: NetworkImage(
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQFkBeTxrsEhBQLmrb_4i-81-pdInvmBdy0w&usqp=CAU"),
                   ),
                   SizedBox(width: 5),
                   Text(
