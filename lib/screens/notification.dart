@@ -116,16 +116,11 @@ class _NotifiScreenState extends State<NotifiScreen> {
             title: Padding(
               padding: const EdgeInsets.only(top: 15),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment
-                    .start, // Aligns the column's content to the start (left)
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    children: [
-                      const Text(
-                        'Notifications',
-                        style: TextStyle(color: Colors.black),
-                      ),
-                    ],
+                  const Text(
+                    'Notifications',
+                    style: TextStyle(color: Colors.black),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
