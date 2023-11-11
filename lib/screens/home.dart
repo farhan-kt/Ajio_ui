@@ -259,8 +259,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   viewportFraction: 1,
                   enlargeCenterPage: true,
                   enableInfiniteScroll: true,
-                  autoPlayInterval: Duration(seconds: 3),
-                  autoPlayAnimationDuration: Duration(milliseconds: 800),
+                  autoPlayInterval: const Duration(seconds: 3),
+                  autoPlayAnimationDuration: const Duration(milliseconds: 800),
                   pauseAutoPlayOnTouch: true,
                   scrollDirection: Axis.horizontal,
                   onPageChanged: (index, reason) {
@@ -281,10 +281,24 @@ class _HomeScreenState extends State<HomeScreen> {
                       const SizedBox(
                         height: 10,
                       ),
-                      Image.asset(
-                        'assets/RuPay.jpg',
-                        height: 80,
-                        width: double.infinity,
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/RuPay.jpg',
+                              height: 80,
+                            ),
+                            Image.asset(
+                              'assets/sbi.jpg',
+                              height: 80,
+                            ),
+                            Image.asset(
+                              'assets/yesbank.jpg',
+                              height: 80,
+                            ),
+                          ],
+                        ),
                       ),
                       CarouselSlider.builder(
                         itemCount: carouselImage2.length,
@@ -308,8 +322,107 @@ class _HomeScreenState extends State<HomeScreen> {
                           },
                         ),
                       ),
+                      Image.asset('assets/hurry.png',
+                          height: 80, width: double.infinity),
+                      Container(
+                        width: double.infinity,
+                        height: 200,
+                        child: const Row(
+                          children: [
+                            Image(image: AssetImage("assets/h1.png")),
+                            Image(image: AssetImage("assets/h2.png")),
+                            Image(image: AssetImage("assets/h3.png")),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        width: double.infinity,
+                        height: 200,
+                        child: const Row(
+                          children: [
+                            Image(image: AssetImage("assets/h2.png")),
+                            Image(image: AssetImage("assets/h1.png")),
+                            Image(image: AssetImage("assets/h4.png")),
+                          ],
+                        ),
+                      ),
+                      const Image(
+                        image: AssetImage("assets/hbetween.jpg"),
+                        width: double.infinity,
+                        height: 80,
+                      ),
+                      Container(
+                        width: double.infinity,
+                        height: 200,
+                        child: const Row(
+                          children: [
+                            Image(image: AssetImage("assets/h4.png")),
+                            Image(image: AssetImage("assets/h3.png")),
+                            Image(image: AssetImage("assets/h1.png")),
+                          ],
+                        ),
+                      ),
+                      CarouselSlider.builder(
+                        itemCount: carsouelImage1.length,
+                        itemBuilder: (context, index, realIndex) {
+                          final imagepath = carsouelImage1[index];
+                          return SizedBox(
+                            width: MediaQuery.of(context).size.width,
+                            child: Image(
+                              image: AssetImage(imagepath),
+                              width: double.infinity,
+                            ),
+                          );
+                        },
+                        options: CarouselOptions(
+                          height: 250,
+                          autoPlay: true,
+                          viewportFraction: 1,
+                          enlargeCenterPage: true,
+                          enableInfiniteScroll: true,
+                          autoPlayInterval: const Duration(seconds: 3),
+                          autoPlayAnimationDuration:
+                              const Duration(milliseconds: 800),
+                          pauseAutoPlayOnTouch: true,
+                          scrollDirection: Axis.horizontal,
+                          onPageChanged: (index, reason) {
+                            setState(() {
+                              activeindex = index;
+                            });
+                          },
+                        ),
+                      ),
+                      const Image(
+                        image: AssetImage("assets/style.PNG"),
+                        width: double.infinity,
+                        height: 80,
+                      ),
                     ],
                   )),
+              Container(
+                width: double.infinity,
+                height: 230,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: const Row(
+                    children: [
+                      Image(image: AssetImage("assets/h2.png")),
+                      Image(image: AssetImage("assets/h1.png")),
+                      Image(image: AssetImage("assets/h4.png")),
+                      Image(image: AssetImage("assets/h3.png")),
+                      Image(image: AssetImage("assets/h2.png"))
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                child: Image(
+                  image: AssetImage("assets/lasthome.jpg"),
+                  width: double.infinity,
+                  height: 90,
+                ),
+              )
             ],
           ),
         ),
