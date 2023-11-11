@@ -402,9 +402,9 @@ class _HomeScreenState extends State<HomeScreen> {
               Container(
                 width: double.infinity,
                 height: 230,
-                child: SingleChildScrollView(
+                child: const SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
-                  child: const Row(
+                  child: Row(
                     children: [
                       Image(image: AssetImage("assets/h2.png")),
                       Image(image: AssetImage("assets/h1.png")),
@@ -417,7 +417,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
-                child: Image(
+                child: const Image(
                   image: AssetImage("assets/lasthome.jpg"),
                   width: double.infinity,
                   height: 90,
