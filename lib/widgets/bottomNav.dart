@@ -35,17 +35,18 @@ class _BottomNavState extends State<BottomNav> {
             _currentSelectedIndex = newIndex;
           });
         },
-        selectedItemColor: Colors.black, 
-        unselectedItemColor: Colors.black, 
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.black,
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.store), label: 'Switch Stores'),
+              icon: Icon(Icons.storefront_outlined), label: 'Switch Stores'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined), label: 'Explore'),
+              icon: Icon(Icons.storefront_outlined), label: 'Explore'),
           BottomNavigationBarItem(icon: Icon(Icons.store), label: 'TRNDin'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.category), label: 'Categories'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Account'),
+              icon: Icon(Icons.border_all), label: 'Categories'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person_2_outlined), label: 'Account'),
         ],
       ),
     );
