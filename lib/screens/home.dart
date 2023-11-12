@@ -326,8 +326,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           height: 80, width: double.infinity),
                       Container(
                         width: double.infinity,
-                        height: 200,
+                        height: 160,
                         child: const Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Image(image: AssetImage("assets/h1.png")),
                             Image(image: AssetImage("assets/h2.png")),
@@ -337,8 +338,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       Container(
                         width: double.infinity,
-                        height: 200,
+                        height: 160,
                         child: const Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Image(image: AssetImage("assets/h2.png")),
                             Image(image: AssetImage("assets/h1.png")),
@@ -353,8 +355,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       Container(
                         width: double.infinity,
-                        height: 200,
+                        height: 160,
                         child: const Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Image(image: AssetImage("assets/h4.png")),
                             Image(image: AssetImage("assets/h3.png")),
@@ -393,9 +396,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       const Image(
-                        image: AssetImage("assets/style.PNG"),
+                        image: AssetImage("assets/beat.jpg"),
                         width: double.infinity,
-                        height: 80,
+                        height: 90,
                       ),
                     ],
                   )),
@@ -415,12 +418,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-              Container(
-                width: MediaQuery.of(context).size.width,
-                child: const Image(
-                  image: AssetImage("assets/lasthome.jpg"),
-                  width: double.infinity,
-                  height: 90,
+              SizedBox(
+                width: double.infinity,
+                height: 60,
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Image(image: AssetImage("assets/lasthome.jpg")),
+                    Image(image: AssetImage("assets/lasthome.jpg"))
+                  ],
                 ),
               )
             ],
