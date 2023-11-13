@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget CustomTabBar() {
+CustomTabBar() {
   return PreferredSize(
     preferredSize: Size.fromHeight(kToolbarHeight),
     child: TabBar(isScrollable: true, indicatorColor: Colors.black, tabs: [

@@ -28,6 +28,7 @@ class _BottomNavState extends State<BottomNav> {
     return Scaffold(
       body: _screens[_currentSelectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+        showUnselectedLabels: true,
         elevation: 0,
         currentIndex: _currentSelectedIndex,
         onTap: (newIndex) {
@@ -41,10 +42,9 @@ class _BottomNavState extends State<BottomNav> {
           BottomNavigationBarItem(
               icon: Icon(Icons.storefront_outlined), label: 'Switch Stores'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.storefront_outlined), label: 'Explore'),
+              icon: Icon(Icons.storefront_sharp), label: 'Explore'),
           BottomNavigationBarItem(icon: Icon(Icons.store), label: 'TRNDin'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.border_all), label: 'Categories'),
+          BottomNavigationBarItem(icon: Icon(Icons.list), label: 'Categories'),
           BottomNavigationBarItem(
               icon: Icon(Icons.person_2_outlined), label: 'Account'),
         ],

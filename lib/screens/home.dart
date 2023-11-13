@@ -1,3 +1,6 @@
+import 'package:ajio_app/screens/bag.dart';
+import 'package:ajio_app/screens/notification.dart';
+import 'package:ajio_app/screens/wishlist.dart';
 import 'package:ajio_app/tabs/tabBar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +19,13 @@ class _HomeScreenState extends State<HomeScreen> {
     'assets/IMG_2.PNG',
     'assets/IMG_3.PNG',
     'assets/IMG_4.PNG',
+  ];
+
+  final carsouelhome2 = [
+    'assets/homeslider1.jpg',
+    'assets/homeslider2.jpg',
+    'assets/homeslider3.jpg',
+    'assets/homeslider4.jpg',
   ];
 
   final carouselImage2 = ['assets/slider1.jpg', 'assets/slider2.jpg'];
@@ -68,169 +78,37 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
-              bottom: TabBar(
-                  isScrollable: true,
-                  indicatorColor: Colors.black,
-                  tabs: [
-                    Tab(
-                      icon: IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.home_filled,
-                            color: Colors.black,
-                          )),
-                    ),
-                    const Tab(
-                      child: Row(children: [
-                        CircleAvatar(
-                          radius: 15,
-                          backgroundColor: Colors.black,
-                          backgroundImage: NetworkImage(
-                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvN86vCVk2TjEbIu-RPf8fg8u8wSTf86uuEA&usqp=CAU"),
-                        ),
-                        SizedBox(width: 5),
-                        Text(
-                          'Sale',
-                          style: TextStyle(color: Colors.black),
-                        )
-                      ]),
-                    ),
-                    const Tab(
-                      child: Row(children: [
-                        CircleAvatar(
-                            radius: 15,
-                            backgroundColor: Colors.black,
-                            backgroundImage: NetworkImage(
-                                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1GPQzRwesRR1qkKezfukGoN2LoPN-jAEo-A&usqp=CAU")),
-                        SizedBox(width: 5),
-                        Text(
-                          'Winterwear',
-                          style: TextStyle(color: Colors.black),
-                        )
-                      ]),
-                    ),
-                    const Tab(
-                      child: Row(children: [
-                        CircleAvatar(
-                          radius: 15,
-                          backgroundColor: Colors.black,
-                          backgroundImage: NetworkImage(
-                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBu5vG3bCtDg_jVLNvFWWicwEMXhHvNOZ4cw&usqp=CAU"),
-                        ),
-                        SizedBox(width: 5),
-                        Text(
-                          'Men',
-                          style: TextStyle(color: Colors.black),
-                        )
-                      ]),
-                    ),
-                    const Tab(
-                      child: Row(children: [
-                        CircleAvatar(
-                          radius: 15,
-                          backgroundColor: Colors.black,
-                          backgroundImage: NetworkImage(
-                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOAiRZnm7YjdxQhCScyX1ubwxvjRLv6jJ79Q&usqp=CAU"),
-                        ),
-                        SizedBox(width: 5),
-                        Text(
-                          'Women',
-                          style: TextStyle(color: Colors.black),
-                        )
-                      ]),
-                    ),
-                    const Tab(
-                      child: Row(children: [
-                        CircleAvatar(
-                          radius: 15,
-                          backgroundColor: Colors.black,
-                          backgroundImage: NetworkImage(
-                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRSmnZNL0tvlQREKIv7sbshoCTuvDxnIXp2Q&usqp=CAU"),
-                        ),
-                        SizedBox(width: 5),
-                        Text(
-                          'Kids',
-                          style: TextStyle(color: Colors.black),
-                        )
-                      ]),
-                    ),
-                    const Tab(
-                      child: Row(children: [
-                        CircleAvatar(
-                          radius: 15,
-                          backgroundColor: Colors.black,
-                          backgroundImage: NetworkImage(
-                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfuKNJNfukdS3qR0eLCtw8NTwm38IsSxn7yw&usqp=CAU"),
-                        ),
-                        SizedBox(width: 5),
-                        Text(
-                          'Jewellery',
-                          style: TextStyle(color: Colors.black),
-                        )
-                      ]),
-                    ),
-                    const Tab(
-                      child: Row(children: [
-                        CircleAvatar(
-                          radius: 15,
-                          backgroundColor: Colors.black,
-                          backgroundImage: NetworkImage(
-                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvsDlfpvFceIiODnAzsgnM5Xteqe1JaFajBQ&usqp=CAU"),
-                        ),
-                        SizedBox(width: 5),
-                        Text(
-                          'Beauty',
-                          style: TextStyle(color: Colors.black),
-                        )
-                      ]),
-                    ),
-                    const Tab(
-                      child: Row(children: [
-                        CircleAvatar(
-                          radius: 15,
-                          backgroundColor: Colors.black,
-                          backgroundImage: NetworkImage(
-                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaFbczhETJcu8OXd0U6DgGtXWhO5KNa1sVYg&usqp=CAU"),
-                        ),
-                        SizedBox(width: 5),
-                        Text(
-                          'Footwear',
-                          style: TextStyle(color: Colors.black),
-                        )
-                      ]),
-                    ),
-                    const Tab(
-                      child: Row(children: [
-                        CircleAvatar(
-                          radius: 15,
-                          backgroundColor: Colors.black,
-                          backgroundImage: NetworkImage(
-                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQFkBeTxrsEhBQLmrb_4i-81-pdInvmBdy0w&usqp=CAU"),
-                        ),
-                        SizedBox(width: 5),
-                        Text(
-                          'Accessories',
-                          style: TextStyle(color: Colors.black),
-                        )
-                      ]),
-                    ),
-                  ]),
-              // bottom: CustomTabBar(),
+              bottom: CustomTabBar(),
               actions: [
                 IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const NotifiScreen()));
+                    },
                     icon: const Icon(
                       Icons.notifications_none_outlined,
                       color: Colors.black,
                     )),
                 const SizedBox(width: 3),
                 IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const wishScreen()));
+                    },
                     icon: const Icon(Icons.favorite_border_outlined,
                         color: Colors.black)),
                 const SizedBox(width: 3),
                 IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const bagScreen()));
+                    },
                     icon: const Icon(Icons.shopping_bag_outlined,
                         color: Colors.black)),
               ],
@@ -330,7 +208,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: const Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Image(image: AssetImage("assets/h1.png")),
+                            Image(image: AssetImage("assets/h4.png")),
                             Image(image: AssetImage("assets/h2.png")),
                             Image(image: AssetImage("assets/h3.png")),
                           ],
@@ -342,33 +220,43 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: const Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Image(image: AssetImage("assets/h2.png")),
-                            Image(image: AssetImage("assets/h1.png")),
+                            Image(image: AssetImage("assets/h3.png")),
+                            Image(
+                              image: AssetImage("assets/h2.png"),
+                            ),
                             Image(image: AssetImage("assets/h4.png")),
                           ],
                         ),
                       ),
                       const Image(
-                        image: AssetImage("assets/hbetween.jpg"),
+                        image: AssetImage("assets/homewinterbar.jpg"),
                         width: double.infinity,
                         height: 80,
                       ),
                       Container(
-                        width: double.infinity,
-                        height: 160,
-                        child: const Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        height: 250,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
                           children: [
-                            Image(image: AssetImage("assets/h4.png")),
-                            Image(image: AssetImage("assets/h3.png")),
-                            Image(image: AssetImage("assets/h1.png")),
+                            const Image(
+                                image: AssetImage("assets/homewinter1.jpg")),
+                            const SizedBox(
+                              width: 6,
+                            ),
+                            const Image(
+                                image: AssetImage("assets/homewinter2.jpg")),
+                            const SizedBox(
+                              width: 6,
+                            ),
+                            const Image(
+                                image: AssetImage("assets/homewinter3.jpg")),
                           ],
                         ),
                       ),
                       CarouselSlider.builder(
-                        itemCount: carsouelImage1.length,
+                        itemCount: carsouelhome2.length,
                         itemBuilder: (context, index, realIndex) {
-                          final imagepath = carsouelImage1[index];
+                          final imagepath = carsouelhome2[index];
                           return SizedBox(
                             width: MediaQuery.of(context).size.width,
                             child: Image(
@@ -410,7 +298,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Row(
                     children: [
                       Image(image: AssetImage("assets/h2.png")),
-                      Image(image: AssetImage("assets/h1.png")),
+                      Image(
+                        image: AssetImage("assets/h5.jpg"),
+                        height: 210,
+                      ),
                       Image(image: AssetImage("assets/h4.png")),
                       Image(image: AssetImage("assets/h3.png")),
                       Image(image: AssetImage("assets/h2.png"))
@@ -418,7 +309,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-              SizedBox(
+              Container(
+                color: Colors.amber[100],
                 width: double.infinity,
                 height: 60,
                 child: const Row(

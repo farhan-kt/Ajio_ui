@@ -14,9 +14,9 @@ class _NotifiScreenState extends State<NotifiScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromARGB(255, 213, 218, 223),
+        backgroundColor: const Color.fromARGB(255, 213, 218, 223),
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(80),
+          preferredSize: const Size.fromHeight(100),
           child: AppBar(
             elevation: 0,
             backgroundColor: Colors.white,
@@ -24,18 +24,18 @@ class _NotifiScreenState extends State<NotifiScreen> {
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: Icon(
-                Icons.close,
+              icon: const Icon(
+                Icons.arrow_back,
                 color: Colors.black,
               ),
             ),
             titleSpacing: 0,
-            title: Padding(
-              padding: const EdgeInsets.only(top: 15),
+            title: const Padding(
+              padding: EdgeInsets.only(top: 15),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     'Notifications',
                     style: TextStyle(color: Colors.black),
                   ),
@@ -43,7 +43,7 @@ class _NotifiScreenState extends State<NotifiScreen> {
               ),
             ),
             bottom: PreferredSize(
-              preferredSize: Size.fromHeight(48),
+              preferredSize: const Size.fromHeight(48),
               child: Row(
                 children: [
                   Expanded(
@@ -56,7 +56,7 @@ class _NotifiScreenState extends State<NotifiScreen> {
                       style: OutlinedButton.styleFrom(
                         backgroundColor:
                             activeButton == 'All' ? Colors.black : Colors.white,
-                        side: BorderSide(width: 1),
+                        side: const BorderSide(width: 1),
                       ),
                       child: Text(
                         'All',
@@ -79,7 +79,7 @@ class _NotifiScreenState extends State<NotifiScreen> {
                         backgroundColor: activeButton == 'Order Updates'
                             ? Colors.black
                             : Colors.white,
-                        side: BorderSide(width: 1),
+                        side: const BorderSide(width: 1),
                       ),
                       child: Text(
                         'Order Updates',
@@ -102,7 +102,7 @@ class _NotifiScreenState extends State<NotifiScreen> {
                         backgroundColor: activeButton == 'Promotions'
                             ? Colors.black
                             : Colors.white,
-                        side: BorderSide(width: 1),
+                        side: const BorderSide(width: 1),
                       ),
                       child: Text(
                         'Promotions',
@@ -119,7 +119,50 @@ class _NotifiScreenState extends State<NotifiScreen> {
             ),
           ),
         ),
-        body: Column(),
+        body: Container(
+          color: Colors.grey[300],
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+              elevation: 10,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SizedBox(
+                  width: double.infinity,
+                  height: 100,
+                  child: ListTile(
+                    title: const Text('👉 Buda Jeans 👉Fyre Rose'),
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text('Under ₹599: Sale Ends Tommorow'),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: OutlinedButton(
+                                  onPressed: () {},
+                                  style: OutlinedButton.styleFrom(
+                                    side: const BorderSide(
+                                        width: 2, color: Colors.black),
+                                  ),
+                                  child: const Text(
+                                    'Shop Now',
+                                    style: TextStyle(color: Colors.black),
+                                  )),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }

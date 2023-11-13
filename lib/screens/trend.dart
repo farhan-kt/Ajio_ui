@@ -1,3 +1,4 @@
+import 'package:ajio_app/screens/notification.dart';
 import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -65,7 +66,12 @@ class _TrndinScreenState extends State<TrndinScreen> {
                 ),
                 actions: [
                   IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const NotifiScreen()));
+                      },
                       icon: const Icon(
                         Icons.notifications_none_outlined,
                         color: Colors.black,
@@ -86,11 +92,9 @@ class _TrndinScreenState extends State<TrndinScreen> {
                 scrollDirection: Axis.vertical,
                 child: Column(
                   children: [
-                    Container(
-                      child: const Image(
-                        image: AssetImage('assets/trendhead.jpg'),
-                        width: double.infinity,
-                      ),
+                    const Image(
+                      image: AssetImage('assets/trendhead.jpg'),
+                      width: double.infinity,
                     ),
                     CarouselSlider.builder(
                       itemCount: carsoueltrend1.length,
@@ -122,25 +126,19 @@ class _TrndinScreenState extends State<TrndinScreen> {
                         },
                       ),
                     ),
-                    Container(
-                      child: const Image(
-                        image: AssetImage('assets/trendstyle.jpg'),
-                        width: double.infinity,
-                        height: 100,
-                      ),
+                    const Image(
+                      image: AssetImage('assets/trendstyle.jpg'),
+                      width: double.infinity,
+                      height: 100,
                     ),
-                    Container(
-                      child: const Image(
-                        image: AssetImage('assets/trendimg1.jpg'),
-                        fit: BoxFit.cover,
-                      ),
+                    const Image(
+                      image: AssetImage('assets/trendimg1.jpg'),
+                      fit: BoxFit.cover,
                     ),
-                    Container(
-                      child: const Image(
-                        image: AssetImage('assets/lasttrendbar.jpg'),
-                        height: 80,
-                        width: double.infinity,
-                      ),
+                    const Image(
+                      image: AssetImage('assets/lasttrendbar.jpg'),
+                      height: 80,
+                      width: double.infinity,
                     ),
                     Container(
                       width: double.infinity,

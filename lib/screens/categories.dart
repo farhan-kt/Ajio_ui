@@ -63,7 +63,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                 ),
                 itemBuilder: (context, index) {
                   return Card(
-                    color: Color.fromARGB(255, 242, 241, 226),
+                    color: const Color.fromARGB(255, 242, 241, 226),
                     elevation: 1,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
@@ -87,7 +87,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                 },
                 itemCount: images.length,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
               Positioned(

@@ -1,3 +1,4 @@
+import 'package:ajio_app/screens/notification.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
@@ -73,7 +74,12 @@ class _ExploreScreenState extends State<ExploreScreen> {
         ),
         actions: [
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const NotifiScreen()));
+              },
               icon: const Icon(
                 Icons.notifications_none_outlined,
                 color: Colors.black,
@@ -139,99 +145,92 @@ class _ExploreScreenState extends State<ExploreScreen> {
                 width: double.infinity,
               ),
             ),
-            Container(
-              color: Colors.amber[100],
-              width: MediaQuery.of(context).size.width,
-              height: 200,
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Image(
-                    image: AssetImage("assets/expimage2.png"),
-                    height: 150,
-                    width: 300,
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        'assets/expgrid1.jpg',
+                        height: 180,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8),
+                        child: Container(
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                'assets/expgrid2.jpg',
+                                height: 90,
+                              ),
+                              Image.asset(
+                                'assets/expgrid3.jpg',
+                                height: 95,
+                              ),
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(right: 11),
-                    child: Column(
-                      children: [
-                        Image(
-                          image: AssetImage("assets/expimage4.jpg"),
-                          height: 100,
-                          width: 100,
-                        ),
-                        Image(
-                          image: AssetImage("assets/expimage4.jpg"),
-                          height: 100,
-                          width: 100,
-                        ),
-                      ],
+                ),
+                Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/expgrid4.jpg',
+                            height: 86,
+                          ),
+                          SizedBox(
+                            height: 6,
+                          ),
+                          Image.asset(
+                            'assets/expgrid5.jpg',
+                            height: 87,
+                          ),
+                        ],
+                      ),
                     ),
-                  )
-                ],
-              ),
-            ),
-            Container(
-              color: Colors.amber[100],
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 11),
-                    child: Column(
-                      children: [
-                        Image(
-                          image: AssetImage("assets/expimage3.jpg"),
-                          height: 100,
-                          width: 100,
+                    Image.asset(
+                      'assets/expgrid6.jpg',
+                      height: 180,
+                    )
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        'assets/expgrid7.jpg',
+                        height: 180,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8),
+                        child: Container(
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                'assets/expgrid8.jpg',
+                                height: 85,
+                              ),
+                              SizedBox(height: 5),
+                              Image.asset(
+                                'assets/expgrid9.jpg',
+                                height: 90,
+                              ),
+                            ],
+                          ),
                         ),
-                        Image(
-                          image: AssetImage("assets/expimage9.jpg"),
-                          height: 80,
-                          width: 150,
-                        ),
-                      ],
-                    ),
+                      )
+                    ],
                   ),
-                  Image(
-                    image: AssetImage("assets/expimage8.jpg"),
-                    height: 150,
-                    width: 250,
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              color: Colors.amber[100],
-              width: MediaQuery.of(context).size.width,
-              height: 200,
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Image(
-                    image: AssetImage("assets/expimage5.jpg"),
-                    height: 150,
-                    width: 300,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(right: 11),
-                    child: Column(
-                      children: [
-                        Image(
-                          image: AssetImage("assets/expimage6.jpg"),
-                          height: 100,
-                          width: 100,
-                        ),
-                        Image(
-                          image: AssetImage("assets/expimage10.jpg"),
-                          height: 80,
-                          width: 100,
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
+                ),
+              ],
             ),
             CarouselSlider.builder(
               itemCount: carsouelexplore2.length,
