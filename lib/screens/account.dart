@@ -111,14 +111,10 @@ class _AccountScreenState extends State<AccountScreen> {
                   return ListTile(
                     title: Text(title),
                     trailing: IconButton(
-                      onPressed: () {
-                        // navigateToPage(title, context);
-                      },
+                      onPressed: () {},
                       icon: Icon(Icons.arrow_right),
                     ),
-                    onTap: () {
-                      // navigateToPage(title, context);
-                    },
+                    onTap: () {},
                   );
                 },
                 separatorBuilder: (BuildContext context, int index) {

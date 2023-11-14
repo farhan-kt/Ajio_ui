@@ -1,3 +1,5 @@
+import 'package:ajio_app/screens/bag.dart';
+import 'package:ajio_app/screens/wishlist.dart';
 import 'package:flutter/material.dart';
 
 class CategoryScreen extends StatefulWidget {
@@ -43,11 +45,21 @@ class _CategoryScreenState extends State<CategoryScreen> {
           ),
           actions: [
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const wishScreen()));
+                },
                 icon: const Icon(Icons.favorite_outline),
                 color: Colors.black),
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const bagScreen()));
+                },
                 icon: const Icon(Icons.shopping_bag_outlined),
                 color: Colors.black)
           ],

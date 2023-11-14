@@ -1,4 +1,6 @@
+import 'package:ajio_app/screens/bag.dart';
 import 'package:ajio_app/screens/notification.dart';
+import 'package:ajio_app/screens/wishlist.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
@@ -86,12 +88,20 @@ class _ExploreScreenState extends State<ExploreScreen> {
               )),
           const SizedBox(width: 3),
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const wishScreen()));
+              },
               icon: const Icon(Icons.favorite_border_outlined,
                   color: Colors.black)),
           const SizedBox(width: 3),
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const bagScreen()));
+              },
               icon:
                   const Icon(Icons.shopping_bag_outlined, color: Colors.black)),
         ],

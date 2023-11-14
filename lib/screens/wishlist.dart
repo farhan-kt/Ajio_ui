@@ -1,3 +1,4 @@
+import 'package:ajio_app/screens/bag.dart';
 import 'package:flutter/material.dart';
 
 class wishScreen extends StatefulWidget {
@@ -24,7 +25,10 @@ class _wishScreenState extends State<wishScreen> {
         ),
         actions: [
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const bagScreen()));
+              },
               icon: const Icon(Icons.shopping_bag_outlined),
               color: Colors.black)
         ],

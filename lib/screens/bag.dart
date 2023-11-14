@@ -1,3 +1,4 @@
+import 'package:ajio_app/screens/wishlist.dart';
 import 'package:flutter/material.dart';
 
 class bagScreen extends StatefulWidget {
@@ -57,7 +58,12 @@ class _bagScreenState extends State<bagScreen> {
                 ),
                 actions: [
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const wishScreen()));
+                    },
                     icon: const Icon(Icons.favorite_border_outlined),
                     color: Colors.black,
                   )
