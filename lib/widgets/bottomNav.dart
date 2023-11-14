@@ -40,10 +40,11 @@ class _BottomNavState extends State<BottomNav> {
         unselectedItemColor: Colors.black,
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.storefront_outlined), label: 'Switch Stores'),
+              icon: Icon(Icons.home_outlined), label: 'Switch Stores'),
           BottomNavigationBarItem(
               icon: Icon(Icons.storefront_sharp), label: 'Explore'),
-          BottomNavigationBarItem(icon: Icon(Icons.store), label: 'TRNDin'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.line_axis_outlined), label: 'TRNDin'),
           BottomNavigationBarItem(icon: Icon(Icons.list), label: 'Categories'),
           BottomNavigationBarItem(
               icon: Icon(Icons.person_2_outlined), label: 'Account'),
