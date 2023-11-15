@@ -12,11 +12,11 @@ class _AccountScreenState extends State<AccountScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 227, 223, 223),
+      backgroundColor: const Color.fromARGB(255, 227, 223, 223),
       appBar: AppBar(
         elevation: 3,
         backgroundColor: Colors.white,
-        title: Text(
+        title: const Text(
           'My Account',
           style: TextStyle(color: Colors.black),
         ),
@@ -25,8 +25,8 @@ class _AccountScreenState extends State<AccountScreen> {
         children: [
           Row(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 15, top: 15, bottom: 15),
+              const Padding(
+                padding: EdgeInsets.only(left: 15, top: 15, bottom: 15),
                 child: CircleAvatar(
                   radius: 60,
                   backgroundColor: Colors.black,
@@ -37,7 +37,7 @@ class _AccountScreenState extends State<AccountScreen> {
                   ),
                 ),
               ),
-              SizedBox(width: 50),
+              const SizedBox(width: 50),
               SizedBox(
                 width: 210,
                 height: 50,
@@ -47,7 +47,7 @@ class _AccountScreenState extends State<AccountScreen> {
                         MaterialStateProperty.all<Color>(Colors.black),
                   ),
                   onPressed: () {},
-                  child: Text('Sign in/Join'),
+                  child: const Text('Sign in/Join'),
                 ),
               ),
             ],
@@ -68,21 +68,23 @@ class _AccountScreenState extends State<AccountScreen> {
                     return Column(
                       children: [
                         Container(
-                            color: Color.fromARGB(255, 201, 195, 195),
+                            color: const Color.fromARGB(255, 201, 195, 195),
                             height: 20),
                         ListTile(
-                          title: Text('Notifications'),
+                          title: const Text('Notifications'),
                           trailing: IconButton(
-                              onPressed: () {}, icon: Icon(Icons.arrow_right)),
+                              onPressed: () {},
+                              icon: const Icon(Icons.arrow_right)),
                           onTap: () {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => NotifiScreen()));
+                                    builder: (context) =>
+                                        const NotifiScreen()));
                           },
                         ),
                         Container(
-                            color: Color.fromARGB(255, 201, 195, 195),
+                            color: const Color.fromARGB(255, 201, 195, 195),
                             height: 20),
                       ],
                     );
@@ -112,13 +114,13 @@ class _AccountScreenState extends State<AccountScreen> {
                     title: Text(title),
                     trailing: IconButton(
                       onPressed: () {},
-                      icon: Icon(Icons.arrow_right),
+                      icon: const Icon(Icons.arrow_right),
                     ),
                     onTap: () {},
                   );
                 },
                 separatorBuilder: (BuildContext context, int index) {
-                  return Divider(
+                  return const Divider(
                     thickness: 1,
                   );
                 },

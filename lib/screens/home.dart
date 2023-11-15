@@ -1,7 +1,7 @@
 import 'package:ajio_app/screens/bag.dart';
 import 'package:ajio_app/screens/notification.dart';
 import 'package:ajio_app/screens/wishlist.dart';
-import 'package:ajio_app/tabs/tabBar.dart';
+import 'package:ajio_app/widgets/tabBar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 

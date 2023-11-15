@@ -123,9 +123,7 @@ class _TrndinScreenState extends State<TrndinScreen> {
                       options: CarouselOptions(
                         height: 300,
                         autoPlay: true,
-                        // viewportFraction: 1,
                         enlargeCenterPage: true,
-                        // enableInfiniteScroll: true,
                         autoPlayInterval: const Duration(seconds: 3),
                         pauseAutoPlayOnTouch: true,
                         scrollDirection: Axis.horizontal,
