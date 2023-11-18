@@ -36,33 +36,33 @@ class _HomeScreenState extends State<HomeScreen> {
           scrollDirection: Axis.vertical,
           child: Column(
             children: [
-              CarouselSlider.builder(
-                itemCount: carsouelImage1.length,
-                itemBuilder: (context, index, realIndex) {
-                  final imagepath = carsouelImage1[index];
-                  return SizedBox(
-                    width: MediaQuery.of(context).size.width,
-                    child: Image(
-                      image: AssetImage(imagepath),
-                      width: double.infinity,
-                    ),
-                  );
-                },
-                options: CarouselOptions(
-                  height: 250,
-                  autoPlay: true,
-                  viewportFraction: 1,
-                  enlargeCenterPage: true,
-                  enableInfiniteScroll: true,
-                  autoPlayInterval: const Duration(seconds: 3),
-                  autoPlayAnimationDuration: const Duration(milliseconds: 800),
-                  pauseAutoPlayOnTouch: true,
-                  scrollDirection: Axis.horizontal,
-                  onPageChanged: (index, reason) {
-                    setState(() {
-                      activeindex = index;
-                    });
+              Container(
+                width: MediaQuery.of(context).size.width,
+                child: CarouselSlider.builder(
+                  itemCount: carsouelImage1.length,
+                  itemBuilder: (context, index, realIndex) {
+                    final imagepath = carsouelImage1[index];
+                    return SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      child:
+                          Image(image: AssetImage(imagepath), fit: BoxFit.fill),
+                    );
                   },
+                  options: CarouselOptions(
+                    height: 330,
+                    autoPlay: true,
+                    viewportFraction: 1,
+                    enlargeCenterPage: true,
+                    enableInfiniteScroll: true,
+                    autoPlayInterval: const Duration(seconds: 3),
+                    autoPlayAnimationDuration: const Duration(seconds: 1),
+                    scrollDirection: Axis.horizontal,
+                    onPageChanged: (index, reason) {
+                      setState(() {
+                        activeindex = index;
+                      });
+                    },
+                  ),
                 ),
               ),
               const SizedBox(
@@ -72,7 +72,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: MediaQuery.of(context).size.width,
                   child: Column(
                     children: [
-                      Image.asset('assets/order.jpg'),
+                      Image.asset(
+                        'assets/order.jpg',
+                        fit: BoxFit.cover,
+                      ),
                       const SizedBox(
                         height: 10,
                       ),
@@ -80,18 +83,15 @@ class _HomeScreenState extends State<HomeScreen> {
                         scrollDirection: Axis.horizontal,
                         child: Row(
                           children: [
-                            Image.asset(
+                            for (final imagePath in [
                               'assets/RuPay.jpg',
-                              height: 80,
-                            ),
-                            Image.asset(
                               'assets/sbi.jpg',
-                              height: 80,
-                            ),
-                            Image.asset(
-                              'assets/yesbank.jpg',
-                              height: 80,
-                            ),
+                              'assets/yesbank.jpg'
+                            ])
+                              Image.asset(
+                                imagePath,
+                                height: 80,
+                              ),
                           ],
                         ),
                       ),
