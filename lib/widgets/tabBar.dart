@@ -1,152 +1,88 @@
 import 'package:flutter/material.dart';
 
-CustomTabBar() {
+PreferredSizeWidget CustomTabBar(BuildContext context) {
+  double circleAvatarRadius = MediaQuery.of(context).size.width;
   return PreferredSize(
     preferredSize: Size.fromHeight(kToolbarHeight),
-    child: TabBar(isScrollable: true, indicatorColor: Colors.black, tabs: [
-      Tab(
-        icon: IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            Icons.home_filled,
-            color: Colors.black,
+    child: TabBar(
+      isScrollable: true,
+      indicatorColor: Colors.black,
+      tabs: [
+        Tab(
+          icon: IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.home_filled,
+              color: Colors.black,
+            ),
           ),
         ),
-      ),
-      const Tab(
-        child: Row(children: [
-          CircleAvatar(
-            radius: 15,
-            backgroundColor: Colors.black,
-            backgroundImage: NetworkImage(
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvN86vCVk2TjEbIu-RPf8fg8u8wSTf86uuEA&usqp=CAU"),
-          ),
-          SizedBox(width: 5),
-          Text(
+        buildTab(
+            context,
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvN86vCVk2TjEbIu-RPf8fg8u8wSTf86uuEA&usqp=CAU',
             'Sale',
-            style: TextStyle(color: Colors.black),
-          )
-        ]),
-      ),
-      const Tab(
-        child: Row(children: [
-          CircleAvatar(
-              radius: 15,
-              backgroundColor: Colors.black,
-              backgroundImage: NetworkImage(
-                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1GPQzRwesRR1qkKezfukGoN2LoPN-jAEo-A&usqp=CAU")),
-          SizedBox(width: 5),
-          Text(
+            circleAvatarRadius),
+        buildTab(
+            context,
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1GPQzRwesRR1qkKezfukGoN2LoPN-jAEo-A&usqp=CAU',
             'Winterwear',
-            style: TextStyle(color: Colors.black),
-          )
-        ]),
-      ),
-      const Tab(
-        child: Row(children: [
-          CircleAvatar(
-            radius: 15,
-            backgroundColor: Colors.black,
-            backgroundImage: NetworkImage(
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBu5vG3bCtDg_jVLNvFWWicwEMXhHvNOZ4cw&usqp=CAU"),
-          ),
-          SizedBox(width: 5),
-          Text(
+            circleAvatarRadius),
+        buildTab(
+            context,
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBu5vG3bCtDg_jVLNvFWWicwEMXhHvNOZ4cw&usqp=CAU',
             'Men',
-            style: TextStyle(color: Colors.black),
-          )
-        ]),
-      ),
-      const Tab(
-        child: Row(children: [
-          CircleAvatar(
-            radius: 15,
-            backgroundColor: Colors.black,
-            backgroundImage: NetworkImage(
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOAiRZnm7YjdxQhCScyX1ubwxvjRLv6jJ79Q&usqp=CAU"),
-          ),
-          SizedBox(width: 5),
-          Text(
+            circleAvatarRadius),
+        buildTab(
+            context,
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOAiRZnm7YjdxQhCScyX1ubwxvjRLv6jJ79Q&usqp=CAU',
             'Women',
-            style: TextStyle(color: Colors.black),
-          )
-        ]),
-      ),
-      const Tab(
-        child: Row(children: [
-          CircleAvatar(
-            radius: 15,
-            backgroundColor: Colors.black,
-            backgroundImage: NetworkImage(
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRSmnZNL0tvlQREKIv7sbshoCTuvDxnIXp2Q&usqp=CAU"),
-          ),
-          SizedBox(width: 5),
-          Text(
+            circleAvatarRadius),
+        buildTab(
+            context,
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRSmnZNL0tvlQREKIv7sbshoCTuvDxnIXp2Q&usqp=CAU',
             'Kids',
-            style: TextStyle(color: Colors.black),
-          )
-        ]),
-      ),
-      const Tab(
-        child: Row(children: [
-          CircleAvatar(
-            radius: 15,
-            backgroundColor: Colors.black,
-            backgroundImage: NetworkImage(
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfuKNJNfukdS3qR0eLCtw8NTwm38IsSxn7yw&usqp=CAU"),
-          ),
-          SizedBox(width: 5),
-          Text(
+            circleAvatarRadius),
+        buildTab(
+            context,
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfuKNJNfukdS3qR0eLCtw8NTwm38IsSxn7yw&usqp=CAU',
             'Jewellery',
-            style: TextStyle(color: Colors.black),
-          )
-        ]),
-      ),
-      const Tab(
-        child: Row(children: [
-          CircleAvatar(
-            radius: 15,
-            backgroundColor: Colors.black,
-            backgroundImage: NetworkImage(
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvsDlfpvFceIiODnAzsgnM5Xteqe1JaFajBQ&usqp=CAU"),
-          ),
-          SizedBox(width: 5),
-          Text(
+            circleAvatarRadius),
+        buildTab(
+            context,
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvsDlfpvFceIiODnAzsgnM5Xteqe1JaFajBQ&usqp=CAU',
             'Beauty',
-            style: TextStyle(color: Colors.black),
-          )
-        ]),
-      ),
-      const Tab(
-        child: Row(children: [
-          CircleAvatar(
-            radius: 15,
-            backgroundColor: Colors.black,
-            backgroundImage: NetworkImage(
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaFbczhETJcu8OXd0U6DgGtXWhO5KNa1sVYg&usqp=CAU"),
-          ),
-          SizedBox(width: 5),
-          Text(
+            circleAvatarRadius),
+        buildTab(
+            context,
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaFbczhETJcu8OXd0U6DgGtXWhO5KNa1sVYg&usqp=CAU',
             'Footwear',
-            style: TextStyle(color: Colors.black),
-          )
-        ]),
-      ),
-      const Tab(
-        child: Row(children: [
-          CircleAvatar(
-            radius: 15,
-            backgroundColor: Colors.black,
-            backgroundImage: NetworkImage(
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQFkBeTxrsEhBQLmrb_4i-81-pdInvmBdy0w&usqp=CAU"),
-          ),
-          SizedBox(width: 5),
-          Text(
+            circleAvatarRadius),
+        buildTab(
+            context,
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQFkBeTxrsEhBQLmrb_4i-81-pdInvmBdy0w&usqp=CAU',
             'Accessories',
-            style: TextStyle(color: Colors.black),
-          )
-        ]),
-      ),
-    ]),
+            circleAvatarRadius),
+      ],
+    ),
+  );
+}
+
+Tab buildTab(BuildContext context, String imageUrl, String label,
+    double circleAvatarRadius) {
+  return Tab(
+    child: Row(
+      children: [
+        CircleAvatar(
+          radius: MediaQuery.of(context).size.width * 0.03,
+          backgroundColor: Colors.black,
+          backgroundImage: NetworkImage(imageUrl),
+        ),
+        const SizedBox(width: 5),
+        Text(
+          label,
+          style: const TextStyle(color: Colors.black),
+        ),
+      ],
+    ),
   );
 }
