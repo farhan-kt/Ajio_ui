@@ -36,33 +36,30 @@ class _HomeScreenState extends State<HomeScreen> {
           scrollDirection: Axis.vertical,
           child: Column(
             children: [
-              Container(
-                width: MediaQuery.of(context).size.width,
-                child: CarouselSlider.builder(
-                  itemCount: carsouelImage1.length,
-                  itemBuilder: (context, index, realIndex) {
-                    final imagepath = carsouelImage1[index];
-                    return SizedBox(
-                      width: MediaQuery.of(context).size.width,
-                      child:
-                          Image(image: AssetImage(imagepath), fit: BoxFit.fill),
-                    );
+              CarouselSlider.builder(
+                itemCount: carsouelImage1.length,
+                itemBuilder: (context, index, realIndex) {
+                  final imagepath = carsouelImage1[index];
+                  return SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    child:
+                        Image(image: AssetImage(imagepath), fit: BoxFit.fill),
+                  );
+                },
+                options: CarouselOptions(
+                  height: 420,
+                  autoPlay: true,
+                  viewportFraction: 1,
+                  enlargeCenterPage: true,
+                  enableInfiniteScroll: true,
+                  autoPlayInterval: const Duration(seconds: 3),
+                  autoPlayAnimationDuration: const Duration(seconds: 1),
+                  scrollDirection: Axis.horizontal,
+                  onPageChanged: (index, reason) {
+                    setState(() {
+                      activeindex = index;
+                    });
                   },
-                  options: CarouselOptions(
-                    height: 330,
-                    autoPlay: true,
-                    viewportFraction: 1,
-                    enlargeCenterPage: true,
-                    enableInfiniteScroll: true,
-                    autoPlayInterval: const Duration(seconds: 3),
-                    autoPlayAnimationDuration: const Duration(seconds: 1),
-                    scrollDirection: Axis.horizontal,
-                    onPageChanged: (index, reason) {
-                      setState(() {
-                        activeindex = index;
-                      });
-                    },
-                  ),
                 ),
               ),
               const SizedBox(
@@ -74,6 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       Image.asset(
                         'assets/order.jpg',
+                        width: MediaQuery.of(context).size.width,
                         fit: BoxFit.cover,
                       ),
                       const SizedBox(
@@ -91,6 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               Image.asset(
                                 imagePath,
                                 height: 80,
+                                width: 400,
                               ),
                           ],
                         ),
@@ -103,11 +102,11 @@ class _HomeScreenState extends State<HomeScreen> {
                               width: MediaQuery.of(context).size.width,
                               child: Image(
                                 image: AssetImage(imagepath),
-                                width: double.infinity,
+                                fit: BoxFit.fill,
                               ));
                         },
                         options: CarouselOptions(
-                          height: 100,
+                          height: 120,
                           autoPlay: true,
                           viewportFraction: 1,
                           onPageChanged: (index, reason) {
@@ -118,7 +117,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       Image.asset('assets/hurry.png',
-                          height: 80, width: double.infinity),
+                          height: 80,
+                          width: MediaQuery.of(context).size.width,
+                          fit: BoxFit.cover),
                       Container(
                         width: double.infinity,
                         height: 160,
@@ -145,11 +146,13 @@ class _HomeScreenState extends State<HomeScreen> {
                           ],
                         ),
                       ),
-                      const Image(
+                      Image(
                         image: AssetImage("assets/homewinterbar.jpg"),
-                        width: double.infinity,
-                        height: 80,
+                        height: MediaQuery.of(context).size.width * 0.07,
+                        width: MediaQuery.of(context).size.width,
+                        fit: BoxFit.cover,
                       ),
+                      SizedBox(height: 5),
                       Container(
                         height: 250,
                         child: ListView(
@@ -175,12 +178,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             width: MediaQuery.of(context).size.width,
                             child: Image(
                               image: AssetImage(imagepath),
-                              width: double.infinity,
+                              width: MediaQuery.of(context).size.width,
+                              fit: BoxFit.fill,
                             ),
                           );
                         },
                         options: CarouselOptions(
-                          height: 250,
+                          height: 400,
                           autoPlay: true,
                           viewportFraction: 1,
                           enlargeCenterPage: true,
@@ -197,10 +201,11 @@ class _HomeScreenState extends State<HomeScreen> {
                           },
                         ),
                       ),
-                      const Image(
+                      Image(
                         image: AssetImage("assets/beat.jpg"),
-                        width: double.infinity,
-                        height: 90,
+                        width: MediaQuery.of(context).size.width,
+                        fit: BoxFit.cover,
+                        height: MediaQuery.of(context).size.width * 0.10,
                       ),
                     ],
                   )),
